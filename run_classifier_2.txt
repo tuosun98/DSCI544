@@ -1,0 +1,7 @@
+﻿训练：python run_classifier_2.py --model_type bert --model_name_or_path roberta_tiny_clue --task_name my --do_train  --data_dir data  --max_seq_length 500 --per_gpu_train_batch_size 8 --per_gpu_eval_batch_size 8 --learning_rate 1e-5  --num_train_epochs 2.0 --logging_steps 6000 --save_steps 6000 --output_dir output --overwrite_output_dir
+
+
+预测：python run_classifier_2.py --model_type bert --model_name_or_path DistillOutputbert --task_name my --do_predict  --data_dir data2/2020/ --output_dir model/2020 --max_seq_length 500 
+      python run_classifier_2.py --model_type bert --model_name_or_path DistillOutputbert --task_name my --do_predict  --data_dir data2/ --output_dir DistillOutput  --max_seq_length 500 
+      python run_classifier_2.py --model_type bert --model_name_or_path test_modelbert --task_name my --do_predict  --data_dir test_data --output_dir test_model --max_seq_length 500 
+
